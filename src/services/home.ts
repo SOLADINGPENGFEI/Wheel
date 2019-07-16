@@ -7,8 +7,5 @@ export function getCardata(): Promise<Object>{
 
 //点击车型返回所有该车型的数据
 export function getDetailCars():Promise<Object> {
-    return request({
-        url: '/v2-car-getMakeListByMasterBrandId.html?MasterID=9&_1563234490330',
-        method: 'GET'
-    })
+    return request.get('/v2-car-getMakeListByMasterBrandId.html')
 }

@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-      <BrandList :data="brandList" />
+      <BrandList :data="brandList" @click="onShow"/>
       <LetterList :data="letterList" />
+      <carDetail v-if="isShow" />
   </div>
 </template>
 
@@ -9,12 +10,18 @@
 import Vue from 'vue';
 import BrandList from '@/components/BrandList.vue'
 import LetterList from '@/components/LetterList.vue'
+import carDetail from '@/components/carDetail.vue'
 import {mapState,mapMutations,mapActions} from 'vuex'
 
 export default Vue.extend({
   name: 'home',
+  data() {
+      return {
+        isShow: false
+      }
+  },
   components: {
-    BrandList,LetterList
+    BrandList,LetterList,carDetail
   },
   computed: {
       ...mapState({
@@ -25,7 +32,10 @@ export default Vue.extend({
   methods: {
     ...mapActions({
       getCardata: 'home/getCardata'
-    })
+    }),
+    onShow() {
+      this.isShow = true
+    }
   },
   created() {
     this.getCardata()
