@@ -1,8 +1,11 @@
 <template>
-    <div class="brandlist">
+    <div class="brand-list">
         <ul v-for="(item, index) in data" :key="index">
             <p>{{index}}</p>
-            <li v-for="(value) in item" :key="value.MasterID" @click="sidebarDetail(value.MasterID)">
+            <li v-for="(value) in item" 
+                class="border-bottom"
+                :key="value.MasterID" 
+                @click="sidebarDetail(value.MasterID)">
                 <img :src="value.CoverPhoto" :alt="value.Name">
                 <span>{{value.Name}}</span>
             </li>
@@ -21,7 +24,6 @@ export default Vue.extend({
     },
     methods: {
         sidebarDetail(id:number) {
-            console.log(this.$router,'...',id)
             this.$router.push({path: '/detail?MasterID='+id})
         }
     }
@@ -31,35 +33,41 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '../scss/global.scss';
-    .brandlist {
-        width: 100%;
-        height: 100%;
-        ul {
-            p {
-                height: 20px;
-                background: #f3f2f2;
-                line-height: 20px;
-                padding: 0 10px;
-            }
-            li {
-                height: 50px;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 0 10px;
-                border-bottom: 1px solid #ccc;
-                &:last-child {
-                    border-bottom: none;
-                }
-                img {
-                    width: 40px;
-                    height: 40px;
-                }
-                span {
-                    display: inline-block;
-                    margin-left: 20px;
-                }
-            }
-        }
+.brand-list{
+    height: 100%;
+    overflow-y: scroll;
+}
+.brand{
+    font-size: .28rem;
+    line-height: .4rem;
+    padding-left: .3rem;
+    color: #aaa;
+}
+ul{
+    width: 100%;
+    background: #fff;
+    p {
+        background: #f0eeee;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 10px;
     }
+}
+li{
+    height: $brand-height;
+    line-height: $brand-height;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    img{
+        height: .8rem;
+    }
+    span{
+        font-size: .32rem;
+        margin-left: .4rem;
+    }
+    &:last-child:after{
+        display: none;
+    }
+}
 </style>

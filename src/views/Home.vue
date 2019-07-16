@@ -2,7 +2,7 @@
   <div class="home">
       <BrandList :data="brandList" @click="onShow"/>
       <LetterList :data="letterList" />
-      <carDetail v-if="isShow" />
+      <carDetail  />
   </div>
 </template>
 
@@ -34,6 +34,7 @@ export default Vue.extend({
       getCardata: 'home/getCardata'
     }),
     onShow() {
+      console.log(this.isShow)
       this.isShow = true
     }
   },
@@ -41,4 +42,12 @@ export default Vue.extend({
     this.getCardata()
   }
 });
-</script>
+</script> 
+
+<style lang="scss" scoped>
+@import '../scss/global.scss';
+.home{
+  background-color: $page-background-color;
+  height: 100%;
+}
+</style>

@@ -6,6 +6,6 @@ export function getCardata(): Promise<Object>{
 }
 
 //点击车型返回所有该车型的数据
-export function getDetailCars():Promise<Object> {
-    return request.get('/v2-car-getMakeListByMasterBrandId.html')
+export function getDetailCars(params:number):Promise<Object> {
+    return request.get('/v2-car-getMakeListByMasterBrandId.html?MasterID='+params)
 }

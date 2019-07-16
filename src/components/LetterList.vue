@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="letterList">
       <ul @touchstart="touchStart"
           @touchmove="touchMove"
           @touchend="touend">
@@ -62,7 +62,7 @@
     position: fixed;
     z-index: 101;
     top: 0;
-    right: 10px;
+    right: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,7 @@
     line-height: 20px;
     color: #666;
     font-weight: 500;
+    padding: 0 .1rem;
   }
     li.active{
       width: 20px;
