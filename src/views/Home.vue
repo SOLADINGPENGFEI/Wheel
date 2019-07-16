@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+      <BrandList :data="brandList" />
+      <LetterList :data="letterList" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import BrandList from '@/components/BrandList.vue'
+import LetterList from '@/components/LetterList.vue'
+import {mapState,mapMutations,mapActions} from 'vuex'
 
 export default Vue.extend({
   name: 'home',
   components: {
-    HelloWorld,
+    BrandList,LetterList
   },
+  computed: {
+      ...mapState({
+        letterList: (state:any) => state.home.letterList,
+        brandList: (state:any) => state.home.brandList
+      })
+  },
+  methods: {
+    ...mapActions({
+      getCardata: 'home/getCardata'
+    })
+  },
+  created() {
+    this.getCardata()
+  }
 });
 </script>
