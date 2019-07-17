@@ -1,0 +1,368 @@
+{
+    "code": 1,
+    "msg": "成功",
+    "data": {
+        "ShowBottomEntrance": 1,
+        "BottomEntranceTitle": "询问底价",
+        "BottomEntranceSubTitle": "- 实价有差异，获取本地4S店报价 -",
+        "BottomEntranceJump": "1",
+        "BottomEntranceLink": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135292&ycre_cityid=0&ycre_flag=3&ycre_from=1&ycre_isNew=1",
+        "SerialID": "4985",
+        "AliasName": "阿尔法·罗密欧Stelvio",
+        "BrandName": "阿尔法·罗密欧",
+        "CoverPhoto": "http:\/\/img4.bitautoimg.com\/autoalbum\/files\/20180814\/571\/20180814110604642341_6189015_{0}.jpg",
+        "CoverPhotoSize": 3,
+        "Picture": "http:\/\/img2.bitautoimg.com\/autoalbum\/files\/20170628\/778\/0609247785_3.jpg",
+        "Spelling": "STELVIO",
+        "AllSpell": "aerfaluomioustelvio",
+        "pic_group_count": 995,
+        "brand": {
+            "MasterID": "92"
+        },
+        "market_attribute": {
+            "car_level_name": "SUV",
+            "country": "8",
+            "country_name": "意大利",
+            "dealer_price": "39.98-127.98万",
+            "official_refer_price": "39.98-96.98万",
+            "sale_status": "在销",
+            "buy_car_price": "",
+            "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&default_car_id=135292&city_id=&cl=0",
+            "price_reduction": "",
+            "oil_consume": "7.9-10.7L"
+        },
+        "jtexts": "",
+        "list": [
+            {
+                "car_id": 135292,
+                "car_name": "2.0T 280HP 豪华版",
+                "trans_type": "",
+                "gear_num": "",
+                "exhaust": "",
+                "exhaust_str": "",
+                "horse_power": "",
+                "add_press_type": "",
+                "inhale_type": "",
+                "max_power": "",
+                "max_power_str": "",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135292&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2019",
+                    "dealer_price": "40.68-45.68万",
+                    "dealer_price_max": "45.68万",
+                    "dealer_price_min": "40.68万",
+                    "official_refer_price": "45.68万",
+                    "sale_status": "新上市",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=135292&cl=0"
+                }
+            },
+            {
+                "car_id": 135293,
+                "car_name": "2.0T 280HP 豪华版 Black Package",
+                "trans_type": "",
+                "gear_num": "",
+                "exhaust": "",
+                "exhaust_str": "",
+                "horse_power": "",
+                "add_press_type": "",
+                "inhale_type": "",
+                "max_power": "",
+                "max_power_str": "",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135293&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2019",
+                    "dealer_price": "47.18-47.18万",
+                    "dealer_price_max": "47.18万",
+                    "dealer_price_min": "47.18万",
+                    "official_refer_price": "47.18万",
+                    "sale_status": "新上市",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=135293&cl=0"
+                }
+            },
+            {
+                "car_id": 135294,
+                "car_name": "2.9T 510HP 四叶草版",
+                "trans_type": "",
+                "gear_num": "",
+                "exhaust": "",
+                "exhaust_str": "",
+                "horse_power": "",
+                "add_press_type": "",
+                "inhale_type": "",
+                "max_power": "",
+                "max_power_str": "",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135294&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2019",
+                    "dealer_price": "96.98-96.98万",
+                    "dealer_price_max": "96.98万",
+                    "dealer_price_min": "96.98万",
+                    "official_refer_price": "96.98万",
+                    "sale_status": "新上市",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=135294&cl=0"
+                }
+            },
+            {
+                "car_id": 135295,
+                "car_name": "2.9T 510HP NRING纽博格林限量版",
+                "trans_type": "",
+                "gear_num": "",
+                "exhaust": "",
+                "exhaust_str": "",
+                "horse_power": "",
+                "add_press_type": "",
+                "inhale_type": "",
+                "max_power": "",
+                "max_power_str": "",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135295&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2019",
+                    "dealer_price": "121.98-121.98万",
+                    "dealer_price_max": "121.98万",
+                    "dealer_price_min": "121.98万",
+                    "official_refer_price": "121.98万",
+                    "sale_status": "新上市",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=135295&cl=0"
+                }
+            },
+            {
+                "car_id": 135296,
+                "car_name": "2.9T 510HP F1限量版",
+                "trans_type": "",
+                "gear_num": "",
+                "exhaust": "",
+                "exhaust_str": "",
+                "horse_power": "",
+                "add_press_type": "",
+                "inhale_type": "",
+                "max_power": "",
+                "max_power_str": "",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135296&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2019",
+                    "dealer_price": "127.98-127.98万",
+                    "dealer_price_max": "127.98万",
+                    "dealer_price_min": "127.98万",
+                    "official_refer_price": "127.98万",
+                    "sale_status": "新上市",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=135296&cl=0"
+                }
+            },
+            {
+                "car_id": "129230",
+                "car_name": "2.9T 四叶草版",
+                "trans_type": "手自一体",
+                "gear_num": "8",
+                "exhaust": "2.9",
+                "exhaust_str": "2.9L",
+                "horse_power": "510",
+                "add_press_type": "",
+                "inhale_type": "涡轮增压",
+                "max_power": "375",
+                "max_power_str": "375kW",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=129230&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2018",
+                    "dealer_price": "90.98-103.8万",
+                    "dealer_price_max": "103.8万",
+                    "dealer_price_min": "90.98万",
+                    "official_refer_price": "96.98万",
+                    "sale_status": "在销",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=129230&cl=0"
+                }
+            },
+            {
+                "car_id": "123231",
+                "car_name": "2.0T 200HP 精英版",
+                "trans_type": "手自一体",
+                "gear_num": "8",
+                "exhaust": "2.0",
+                "exhaust_str": "2.0L",
+                "horse_power": "203",
+                "add_press_type": "",
+                "inhale_type": "涡轮增压",
+                "max_power": "149",
+                "max_power_str": "149kW",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=123231&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2017",
+                    "dealer_price": "29.98-41.8万",
+                    "dealer_price_max": "41.8万",
+                    "dealer_price_min": "29.98万",
+                    "official_refer_price": "39.98万",
+                    "sale_status": "在销",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=123231&cl=0"
+                }
+            },
+            {
+                "car_id": "124578",
+                "car_name": "2.0T 200HP 豪华版",
+                "trans_type": "手自一体",
+                "gear_num": "8",
+                "exhaust": "2.0",
+                "exhaust_str": "2.0L",
+                "horse_power": "203",
+                "add_press_type": "",
+                "inhale_type": "涡轮增压",
+                "max_power": "149",
+                "max_power_str": "149kW",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=124578&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2017",
+                    "dealer_price": "32.68-44.8万",
+                    "dealer_price_max": "44.8万",
+                    "dealer_price_min": "32.68万",
+                    "official_refer_price": "42.68万",
+                    "sale_status": "在销",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=124578&cl=0"
+                }
+            },
+            {
+                "car_id": "124579",
+                "car_name": "2.0T 280HP 豪华版",
+                "trans_type": "手自一体",
+                "gear_num": "8",
+                "exhaust": "2.0",
+                "exhaust_str": "2.0L",
+                "horse_power": "284",
+                "add_press_type": "",
+                "inhale_type": "涡轮增压",
+                "max_power": "209",
+                "max_power_str": "209kW",
+                "peak_power": "",
+                "peak_power_str": "",
+                "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=124579&ycre_cityid=0&ycre_flag=1",
+                "jtexts": "",
+                "link_from": "",
+                "market_attribute": {
+                    "year": "2017",
+                    "dealer_price": "35.68-47.8万",
+                    "dealer_price_max": "47.8万",
+                    "dealer_price_min": "35.68万",
+                    "official_refer_price": "45.68万",
+                    "sale_status": "在销",
+                    "buy_car_detail_url": "https:\/\/bu.chelun.com\/xunjia-new\/?SerialID=4985&city_id=&car_id=124579&cl=0"
+                }
+            }
+        ],
+        "link_from": "",
+        "shorttips": {
+            "title": "<font color=\"#666666\">首付3千起，包购置税还送一年保险！<\/font>",
+            "url": "https:\/\/chelun.com\/url\/QB7FFPxt",
+            "firstword": "爆",
+            "fontcolor": "#ff0000",
+            "bordercolor": "#ff0000"
+        },
+        "EntranceList": [
+            {
+                "type": "1",
+                "title": "旧车换钱",
+                "subTitle": "一键发布全网",
+                "hColor": "#333",
+                "link": "https:\/\/chelun.com\/url\/hBzFGxX",
+                "sort": 0,
+                "icon_url": "https:\/\/static.clfile.com\/g2\/img\/p\/fund\/jiuchehuanqian_bg@2x.png",
+                "jtexts": "http:\/\/baojia.chelun.com\/static\/js\/taoche.js"
+            },
+            {
+                "id": "2",
+                "title": "贷款方案",
+                "subTitle": "首付3千起，还送保险",
+                "hColor": "#FF3030",
+                "link": "https:\/\/chelun.com\/url\/cG6FKPjh?id=4985_135292",
+                "sort": 3,
+                "icon_url": "https:\/\/static.clfile.com\/g2\/img\/p\/fund\/daikuanfangan_bg@2x.png",
+                "hText": [
+                    "3"
+                ],
+                "jtexts": "http:\/\/baojiadev.chelun.com\/static\/js\/taoche.js"
+            }
+        ],
+        "popup": {
+            "open": 0,
+            "type": "1",
+            "text": [
+                "看了这么久，来询个底价吧，真实价格可能更低噢~",
+                "真实价格可能更低，来询个底价吧"
+            ]
+        },
+        "see_button_status": "1",
+        "bottom_button": {
+            "left_button": {
+                "name": "贷款购车",
+                "link_from": "",
+                "url": "https:\/\/chelun.com\/url\/cG6FKPjh?id=4985_135292",
+                "is_hidden": 1
+            },
+            "right_button": {
+                "name": "询问底价",
+                "url": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135292&ycre_cityid=0&ycre_flag=1&ycre_from=1",
+                "jtexts": "",
+                "link_from": "",
+                "is_hidder": 1
+            }
+        },
+        "abTestVRType": 1,
+        "jvrtexts": "http:\/\/baojia.chelun.com\/static\/js\/v_.js?v=1.0.2",
+        "vrurl": "https:\/\/photo.m.yiche.com\/photo\/panoout\/?id=1216&C=A&open_car_id=135292",
+        "topPriceButton": {
+            "title": "免费询价",
+            "link": "http:\/\/baojia.chelun.com\/yiche-redirectYicheWeb.html?ycre_serialid=4985&ycre_carid=135292&ycre_cityid=0&ycre_flag=3&ycre_from=1&ycre_isNew=1",
+            "jtexts": ""
+        },
+        "BrandLogo": "http:\/\/image.bitautoimg.com\/bt\/car\/default\/images\/logo\/masterbrand\/png\/100\/m_92_100.png",
+        "is_new_energy": 0,
+        "subsidy_title": "APP下载",
+        "subsidy_url": "https:\/\/chelun.com\/url\/zw6F8yam",
+        "new_energy_attribute": {
+            "must_mileageconstant": 0,
+            "min_fast_chargetime": 0,
+            "max_fast_chargetime": 0,
+            "battery_warranty": 0,
+            "battery_capacity": 0
+        },
+        "tags": [],
+        "multimedia": {
+            "video_url": "",
+            "video_pic": "http:\/\/img4.bitautoimg.com\/newsimg_660x440\/Video\/2018\/06\/22\/2018622175959886.jpg",
+            "inner_url": "",
+            "outer_url": "https:\/\/vr.yiche.com\/vr\/PanoOutIndex.html?modelId=4985&c=a&app_ver=10.5.0&isNew=1"
+        },
+        "is_show_buycar_invoice": 0,
+        "is_followed": 0
+    },
+    "timestamp": 1563355692,
+    "version": 1
+}

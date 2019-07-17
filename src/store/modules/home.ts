@@ -4,7 +4,8 @@ const state = {
     carsData: [] = [],
     letterData: [] = [],
     typeData: [] = [],
-    carDetailData: {} = {}
+    carDetailData: {} = {},
+   
 }
 const mutations = {
     upCarsData(state: any, payload: Array<Object>) {
@@ -18,7 +19,14 @@ const mutations = {
     },
     upCarDetailData(state:any,payload:Object){
         state.carDetailData=payload
-        console.log(111,state.carDetailData)
+    },
+    upYearData(state:any,payload:any){
+        state.yearData=payload
+        console.log('yearData',state.yearData)
+    },
+    upKindsData(state:any,payload:any){
+        state.kindsData=payload
+        console.log('kindsData',state.kindsData)
     }
 }
 const actions = {
@@ -46,6 +54,19 @@ const actions = {
     async getCarDetailData({ commit }: { commit: Function },payload:any): Promise<void> {
         let data:any = await getCarDetail(payload);
         commit('upCarDetailData',data.data)
+        //console.log('data.data',data.data.list)
+        //筛选年
+        let yearData:any=[]
+        data.data.list.forEach((item:any)=>{
+            return yearData.push(item.market_attribute.year*1)
+        })
+        commit('upYearData',Array.from(new Set(yearData)))
+        //筛选不同的类型 
+        let kindsData:any=[]
+        data.data.list.forEach((item:any)=>{
+            return kindsData.push(item.inhale_type)
+        })
+        commit('upKindsData',Array.from(new Set(kindsData)))
     }
 }
 
