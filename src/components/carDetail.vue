@@ -1,9 +1,10 @@
 <template>
-    <div class="sidebar" v-if="sidebar">
+    <div class="sidebar" v-if="sidebar"  ref="backTo" @click="backInit">
         <div v-for="(item,index) in data.data" :key="index">
             <p>{{item.GroupName}}</p>
             <ul>
-                <li v-for="(ite) in item.GroupList" :key="ite.SerialID">
+                <li v-for="(ite) in item.GroupList" :key="ite.SerialID"
+                @click="detailMsg(ite.SerialID)">
                     <img :src="ite.CoverPhoto" alt="">
                     <div>
                         <h3 class="title">{{ite.AliasName}}</h3>
@@ -26,7 +27,14 @@ export default Vue.extend({
         }
     },
     methods: {
-       
+       backInit() { 
+        console.log(this.$refs.backTo)
+        this.$store.state.detail.sidebar = false
+       },
+       detailMsg(SerialID:number) {
+            this.$router.push({path:'/carDetail?SerialID='+SerialID})
+       }
+        
     },
     computed: {
        ...mapState({
@@ -51,6 +59,9 @@ export default Vue.extend({
         z-index: 999;
         overflow-y: scroll;
         animation: sideslip .5s;
+        &.hide {
+            animation: sideinit .5s;
+        }
         div {
             width: 100%;
             p {
@@ -80,7 +91,7 @@ export default Vue.extend({
                         height: 100%;
                         h3 {
                             color: #5f687a;
-                            font-size: .34rem;
+                            font-size: .30rem;
                             margin-top: 10px;
                         }
                         .price {
@@ -96,7 +107,20 @@ export default Vue.extend({
     }
     @keyframes sideslip
         {
-            from {width:0}
-            to {width: 80%}
+            from {
+                width:0;
+            }
+            to {
+                width: 80%;
+            }
+        }
+    @keyframes sideinit
+        {
+            from {
+                width:80%;
+            }
+            to {
+                width: 0;
+            }
         }
 </style>

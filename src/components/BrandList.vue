@@ -36,14 +36,11 @@ export default Vue.extend({
         sidebarDetail(id:number) {
             this.$router.push({path: '/?MasterID='+id})
             this.$store.state.detail.sidebar = true
-            // this.getSidebar(this.sidebar)
             this.getDetailCars(id)
         },
         ...mapMutations({
-            // updateSidebar: 'detail/updateSidebar'
         }),
         ...mapActions({
-            // getSidebar: 'detail/getSidebar',
             getDetailCars: 'detail/getDetailCars'
         })
     },

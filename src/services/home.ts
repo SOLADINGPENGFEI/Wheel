@@ -9,3 +9,8 @@ export function getCardata(): Promise<Object>{
 export function getDetailCars(params:number):Promise<Object> {
     return request.get('/v2-car-getMakeListByMasterBrandId.html?MasterID='+params)
 }
+
+//点机具体的该车的详情数据的图片
+export function getImg():Promise<Object> {
+    return request.get('/v2-car-getImageList.html?SerialID=2593&_1563368067386')
+}
