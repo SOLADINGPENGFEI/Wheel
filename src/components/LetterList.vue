@@ -18,17 +18,21 @@
       data: {
         type: Array,
         value: []
+      },
+      current: {
+        type: String,
+        value: ''
       }
     },
     data() {
       return {
-        current: '',
         isTouch: false
       }
     },
     methods: {
       touchStart(e: Event):void {
         this.isTouch = true
+        this.touchMove(e)
       },
       touchMove(e: Event):void {
         // console.log(e)
@@ -46,11 +50,11 @@
           letterIndex = this.data.length-1;
         }
         // console.log('letter...', this.data[letterIndex]);
-        this.current = this.data[letterIndex];
+        this.$emit('update:current', this.data[letterIndex])
       },
       touend(e: Event):void {
         this.isTouch = false
-        this.current = ''
+        this.$emit('update: current', '')
       }
     }
   })

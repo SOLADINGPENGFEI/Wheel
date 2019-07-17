@@ -1,8 +1,9 @@
 <template>
   <div class="home">
-      <BrandList :data="brandList" @click="onShow"/>
-      <LetterList :data="letterList" />
-      <carDetail  />
+      <BrandList :data="brandList" :current="current" />
+      <LetterList :data="letterList" :current.sync="current" />
+      <carDetail :data="detailcar" />
+      
   </div>
 </template>
 
@@ -17,29 +18,31 @@ export default Vue.extend({
   name: 'home',
   data() {
       return {
-        isShow: false
+        current: ''
       }
   },
   components: {
-    BrandList,LetterList,carDetail
+    BrandList,LetterList,
+    carDetail
   },
   computed: {
       ...mapState({
         letterList: (state:any) => state.home.letterList,
-        brandList: (state:any) => state.home.brandList
+        brandList: (state:any) => state.home.brandList,
+        sidebar: (state:any) => state.detail.sidebar,
+        detailcar: (state:any) => state.detail.detailcar
       })
   },
   methods: {
     ...mapActions({
-      getCardata: 'home/getCardata'
-    }),
-    onShow() {
-      console.log(this.isShow)
-      this.isShow = true
-    }
+      getCardata: 'home/getCardata',
+      getDetailCars: 'detail/getDetailCars'
+    })
   },
   created() {
     this.getCardata()
+    let MasterID:any = this.$router.currentRoute.query.MasterID
+    this.getDetailCars(MasterID)
   }
 });
 </script> 
@@ -49,5 +52,7 @@ export default Vue.extend({
 .home{
   background-color: $page-background-color;
   height: 100%;
+  width: 100%;
+   
 }
 </style>

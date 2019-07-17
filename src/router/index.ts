@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
-import Detail from '@/components/carDetail.vue'
+// import Detail from '@/components/carDetail.vue'
 
 Vue.use(Router)
 
@@ -13,13 +13,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      children: [
-        {
-          path: '/detail',
-          name: 'detail',
-          component: Detail
-        }
-      ]
+      // children: [
+      //   {
+      //     path: '/detail',
+      //     name: 'detail',
+      //     component: Detail
+      //   }
+      // ]
     }
   ]
 })

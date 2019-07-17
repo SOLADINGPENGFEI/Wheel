@@ -1,7 +1,7 @@
 <template>
-    <div class="brand-list">
+    <div class="brand-list" ref="scrollEle">
         <ul v-for="(item, index) in data" :key="index">
-            <p>{{index}}</p>
+            <p :ref="index">{{index}}</p>
             <li v-for="(value) in item" 
                 class="border-bottom"
                 :key="value.MasterID" 
@@ -15,17 +15,52 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import {mapState,mapMutations, mapActions} from 'vuex'
 export default Vue.extend({
     props: {
         data: {
             type: Object,
             value: {}
+        },
+        current: {
+            type: String,
+            value: ''
+        }
+    },
+    data(){
+        return {
+           
         }
     },
     methods: {
         sidebarDetail(id:number) {
-            this.$router.push({path: '/detail?MasterID='+id})
+            this.$router.push({path: '/?MasterID='+id})
+            this.$store.state.detail.sidebar = true
+            // this.getSidebar(this.sidebar)
+            this.getDetailCars(id)
+        },
+        ...mapMutations({
+            // updateSidebar: 'detail/updateSidebar'
+        }),
+        ...mapActions({
+            // getSidebar: 'detail/getSidebar',
+            getDetailCars: 'detail/getDetailCars'
+        })
+    },
+    computed: {
+        ...mapState({
+            sidebar: (state:any) => state.detail.sidebar
+        })
+    },
+    watch: {
+        current(val) {
+            if(val) {
+                this.$refs.scrollEle.scrollTop = this.$refs[val][0].offsetTop 
+            }
         }
+    },
+    created() {
+       
     }
 })
 </script>
