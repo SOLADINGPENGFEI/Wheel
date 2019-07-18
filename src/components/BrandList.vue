@@ -6,7 +6,7 @@
                 class="border-bottom"
                 :key="value.MasterID" 
                 @click="sidebarDetail(value.MasterID)">
-                <img :src="value.CoverPhoto" :alt="value.Name">
+                <img :src="timg" :data-src="value.CoverPhoto" alt="">
                 <span>{{value.Name}}</span>
             </li>
         </ul>
@@ -16,6 +16,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import {mapState,mapMutations, mapActions} from 'vuex'
+import timg from '@/assets/loading2.gif'
+import LazyLoad from '@/utils/lazyLoad.js';
 export default Vue.extend({
     props: {
         data: {
@@ -29,7 +31,7 @@ export default Vue.extend({
     },
     data(){
         return {
-           
+           timg
         }
     },
     methods: {
@@ -53,6 +55,11 @@ export default Vue.extend({
         current(val) {
             if(val) {
                 this.$refs.scrollEle.scrollTop = this.$refs[val][0].offsetTop 
+            }
+        },
+        data() {
+            if(Object.keys(this.data).length) {
+                new LazyLoad(this.$refs.scrollEle)
             }
         }
     },
@@ -93,6 +100,7 @@ li{
     padding: 0 10px;
     img{
         height: .8rem;
+        width: 40px;
     }
     span{
         font-size: .32rem;

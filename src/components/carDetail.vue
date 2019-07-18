@@ -1,11 +1,11 @@
 <template>
     <div class="sidebar" v-if="sidebar"  ref="backTo" @click="backInit">
-        <div v-for="(item,index) in data.data" :key="index">
+        <div v-for="(item,index) in data" :key="index">
             <p>{{item.GroupName}}</p>
             <ul>
                 <li v-for="(ite) in item.GroupList" :key="ite.SerialID"
                 @click="detailMsg(ite.SerialID)">
-                    <img :src="ite.CoverPhoto" alt="">
+                    <img :src="loading" :data-src="ite.CoverPhoto" alt="">
                     <div>
                         <h3 class="title">{{ite.AliasName}}</h3>
                         <span class="price">{{ite.DealerPrice}}</span>
@@ -19,11 +19,18 @@
 
 import Vue from 'vue'
 import { mapState, mapMutations, mapActions } from 'vuex'
+import LazyLoad from '@/utils/lazyLoad.js'
+import loading from '@/assets/loading2.gif'
 export default Vue.extend({
     props: {
         data: {
-            type: Object,
-            value: {}
+            type: Array,
+            value: []
+        }
+    },
+    data() {
+        return {
+            loading
         }
     },
     methods: {
@@ -31,15 +38,28 @@ export default Vue.extend({
         console.log(this.$refs.backTo)
         this.$store.state.detail.sidebar = false
        },
+       ...mapActions({
+           getInfocar: 'home/getInfocar'
+       }),
        detailMsg(SerialID:number) {
             this.$router.push({path:'/carDetail?SerialID='+SerialID})
+            this.getInfocar(SerialID)
        }
         
     },
+    watch: {
+        data() {
+            if(this.data.length) {
+                new LazyLoad(this.$refs.backTo)
+            }
+        }
+    },
     computed: {
        ...mapState({
-           sidebar: (state:any) => state.detail.sidebar
-       })
+           sidebar: (state:any) => state.detail.sidebar,
+            Infocar: (state:any) => state.home.Infocar
+       }),
+       
     },
     created() {
       

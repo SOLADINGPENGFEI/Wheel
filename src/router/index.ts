@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import img from '@/views/img.vue'
+import detail from '@/views/detail.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,10 @@ export default new Router({
       path: '/img',
       name: 'img',
       component: img
+    }, {
+      path: '/carDetail',
+      name: 'carDetail',
+      component: detail
     }
   ]
 })

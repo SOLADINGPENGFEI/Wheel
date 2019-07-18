@@ -1,8 +1,9 @@
-import {getCardata} from '@/services/home'
+import {getCardata, getInfocar} from '@/services/home'
 const state = {
     brandList: {} = {},
     letterList: [] = [],
-    typeList: [] = []
+    typeList: [] = [],
+    Infocar: {} = {}
 }
 
 const actions = {
@@ -25,6 +26,11 @@ const actions = {
             return item.Spelling[0];
         })
         commit('updateLetterList', Array.from(new Set(letterList)));
+    },
+    async getInfocar({commit}:{commit:Function},payload:any):Promise<void> {
+        // console.log('payloadInfo...',payload)
+        let data:any = await getInfocar(payload) 
+        commit('updateInfocar',data)
     }
 }
 
@@ -37,6 +43,10 @@ const mutations = {
     },
     updateTypeList(state: any, payload: Array<Object>){
         state.typeList = payload;
+    },
+    updateInfocar(state:any, payload:any) {
+        // console.log('payloadInfo...',payload)
+        state.Infocar = payload.data
     }
 }
 

@@ -2,22 +2,46 @@
     <div class="car-img">
         <div class="nav">
             <p>
-                <span>颜色</span>
+                <span @click="chooseColor">颜色</span>
             </p>
             <p>
                 <span>车款</span>
             </p>
         </div>
-        <ul class="img-default">
-            <li></li>
-        </ul>
+        <div class="main">
+            <ul class="img-default" v-for="(item,index) in imgdata" :key="index">
+                <li v-for="(ite,ind) in item.List" :key="ind">
+                    <img :src="ite.Url.replace('{0}',3)" alt="">
+                    <div class="classify" v-if="ind==0">
+                        <p>{{item.Name}}</p>
+                        <p>{{item.Count}}></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import {mapState,mapMutations,mapActions} from 'vuex'
 export default Vue.extend({
-    
+    methods: {
+        ...mapActions({
+            getImgdata: 'img/getImgdata'
+        }),
+        chooseColor() {
+            console.log()
+        }
+    },
+    computed: {
+        ...mapState({
+            imgdata: (state:any) => state.img.imgdata
+        })
+    },
+    created() {
+        this.getImgdata()
+    }
 })
 </script>
 
@@ -26,6 +50,8 @@ export default Vue.extend({
         width: 100%;
         height: 100%;
         background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
         .nav {
             width: 100%;
             height: 40px;
@@ -51,15 +77,38 @@ export default Vue.extend({
                     vertical-align: 5%;
                 }
         }
-        .img-default {
-            overflow: hidden;
-            position: absolute;
-            background: #fff;
-            top: .98rem;
-            bottom: 0;
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-            border-bottom: .4rem solid #f4f4f4;
+        .main {
+             flex: 1;
+             overflow-y: scroll;
+              ul {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                li {
+                    width: 33%;
+                    height: 123px;
+                    position: relative;
+                    .classify {
+                        width: 123px;
+                        height: 123px;
+                        background: rgba(27, 27, 27, 0.479);
+                        color: #fff;
+                        text-align: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        line-height: 40px;
+                        p {
+                            padding: 10px;
+                        }
+                    }
+                     img {
+                        width: 123px;
+                        height: 123px;
+                    }
+                }
+            }
         }
     }
 </style>

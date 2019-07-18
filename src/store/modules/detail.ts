@@ -6,15 +6,15 @@ const state = {
 }
 
 const mutations = {
-    updateDetail(state:any,payload:Array<Object>) {
+    updateDetail(state:any,payload:any) {
         // console.log('payload...update', payload)
-        state.detailcar = payload
+        state.detailcar = payload.data
     }
 }
 
 const actions = {
     async getDetailCars({commit}:{commit:Function},payload:any): Promise<void> {
-        console.log('payload...',payload)
+        // console.log('payload...',payload)
         let params:number = payload
 
         let data:any = await getDetailCars(params)
