@@ -1,7 +1,7 @@
 <template>
     <div class="detail">
         <div class="car">
-            <div class="img">
+            <div class="img" @touch="Touch">
                 <img :src="Infocar.Picture" alt="">
                 <span class="num">{{Infocar.pic_group_count}}张照片</span>
             </div>
@@ -15,10 +15,8 @@
             <div class="car-list">
                 <div class="c-type">
                     <span class="active">全部</span>
-                    <span v-for="(item,index) in Infocar.list" :key="index">
-                        {{
-                            
-                        }}
+                    <span v-for="(item,index) in infoYear" :key="index">
+                        {{item}}
                     </span>
                 </div>
                 <div class="list">
@@ -53,8 +51,12 @@ export default Vue.extend({
     },
     computed: {
         ...mapState({
-            Infocar: (state:any) => state.home.Infocar
+            Infocar: (state:any) => state.home.Infocar,
+            infoYear: (state:any) => state.home.infoYear
         })
+    },
+    methods: {
+        
     }
 })
 </script>
@@ -63,10 +65,8 @@ export default Vue.extend({
     .detail {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
         .car {
-            // height: 100%;
+            height: 100%;
             width: 100%;
             .img {
                 width: 100%;
@@ -137,6 +137,7 @@ export default Vue.extend({
                 }
                 .list {
                      .cont {
+                         padding: 0 10px;
                          .detailMsg {
                              padding: 0 .2rem;
                              height: .5rem;
@@ -161,18 +162,18 @@ export default Vue.extend({
                                 .price {
                                     text-align: right;
                                     padding-bottom: .1rem;
-                                    font-size: .24rem;
+                                    font-size: 12px;
                                     color: #818181;
                                     .refer {
                                         text-align: right;
                                         padding-bottom: .1rem;
-                                        font-size: .24rem;
+                                        font-size: 12px;
                                         color: #818181;
                                     }
                                     .min {
-                                        font-size: .3rem;
+                                        font-size: 18px;
                                         color: #ff2336;
-                                        margin-left: .1rem;
+                                        margin-left: 18px;
                                     }
                                 }
                                 button {

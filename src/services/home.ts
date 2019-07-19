@@ -16,8 +16,8 @@ export function getInfocar(id:number):Promise<Object> {
 }
 
 //点机具体的该车的详情数据的图片
-export function getImg():Promise<Object> {
-    return request.get('/v2-car-getImageList.html?SerialID=2593&_1563368067386')
+export function getImg(id:any):Promise<Object> {
+    return request.get('/v2-car-getImageList.html?_1563368067386&SerialID='+id)
 }
 
 //点击分类的图片获取分类下所有的图片

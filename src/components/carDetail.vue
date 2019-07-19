@@ -21,6 +21,7 @@ import Vue from 'vue'
 import { mapState, mapMutations, mapActions } from 'vuex'
 import LazyLoad from '@/utils/lazyLoad.js'
 import loading from '@/assets/loading2.gif'
+
 export default Vue.extend({
     props: {
         data: {
@@ -30,12 +31,11 @@ export default Vue.extend({
     },
     data() {
         return {
-            loading
+            loading,
         }
     },
     methods: {
        backInit() { 
-        console.log(this.$refs.backTo)
         this.$store.state.detail.sidebar = false
        },
        ...mapActions({
@@ -62,7 +62,10 @@ export default Vue.extend({
        
     },
     created() {
-      
+        
+    },
+    mounted() {
+        new LazyLoad(this.$refs.backTo)
     }
     
 })

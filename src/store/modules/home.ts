@@ -3,7 +3,9 @@ const state = {
     brandList: {} = {},
     letterList: [] = [],
     typeList: [] = [],
-    Infocar: {} = {}
+    Infocar: {} = {},
+    infoYear: [] = [],
+    initData: {} = {}
 }
 
 const actions = {
@@ -26,27 +28,39 @@ const actions = {
             return item.Spelling[0];
         })
         commit('updateLetterList', Array.from(new Set(letterList)));
+        commit('updateInit',data)
     },
     async getInfocar({commit}:{commit:Function},payload:any):Promise<void> {
-        // console.log('payloadInfo...',payload)
+        
         let data:any = await getInfocar(payload) 
-        commit('updateInfocar',data)
+        
+        let market:any = data.data.list.map((item:any)=> {
+            // return new Set(item.market_attribute.year)
+            return item.market_attribute.year
+        })
+        let yearArray = Array.from(new Set(market))
+        commit('updateInfocar',{yearArray,data})
     }
 }
 
 const mutations = {
-    updateBrandList(state: any, payload: Object){
+    updateInit(state:any , payload: any) {
+        // console.log('payload...',payload)
+        state.initData = payload
+    },
+    updateBrandList(state: any, payload: Object) {
         state.brandList = payload;
     },
-    updateLetterList(state: any, payload: Array<string>){
+    updateLetterList(state: any, payload: Array<string>) {
         state.letterList = payload;
     },
-    updateTypeList(state: any, payload: Array<Object>){
+    updateTypeList(state: any, payload: Array<Object>) {
         state.typeList = payload;
     },
     updateInfocar(state:any, payload:any) {
-        // console.log('payloadInfo...',payload)
-        state.Infocar = payload.data
+        console.log('dataInfo...',payload)
+        state.Infocar = payload.data.data
+        state.infoYear = payload.yearArray
     }
 }
 

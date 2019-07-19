@@ -3,6 +3,7 @@ import {Debounce} from './debounce.js'
 export default function LazyLoad(el) {
     this.el = el || window;
     this.init();
+    this.loadImg()
 }
 
 LazyLoad.prototype = {
@@ -11,7 +12,7 @@ LazyLoad.prototype = {
             this.loadImg()
         })
         this.el.addEventListener('scroll', loadImg)
-        this.loadImg()
+        // this.loadImg()
     },
     loadImg() {
         let imgs = document.querySelectorAll('img[data-src]')

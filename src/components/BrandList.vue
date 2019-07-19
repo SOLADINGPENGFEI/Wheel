@@ -18,6 +18,7 @@ import Vue from 'vue'
 import {mapState,mapMutations, mapActions} from 'vuex'
 import timg from '@/assets/loading2.gif'
 import LazyLoad from '@/utils/lazyLoad.js';
+
 export default Vue.extend({
     props: {
         data: {
@@ -50,6 +51,7 @@ export default Vue.extend({
         ...mapState({
             sidebar: (state:any) => state.detail.sidebar
         })
+        
     },
     watch: {
         current(val) {
@@ -64,7 +66,11 @@ export default Vue.extend({
         }
     },
     created() {
-       
+    
+    },
+    mounted() {
+        console.log(this.$refs.scrollEle)
+        new LazyLoad(this.$refs.scrollEle)
     }
 })
 </script>

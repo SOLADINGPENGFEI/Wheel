@@ -3,7 +3,6 @@
       <BrandList :data="brandList" :current="current" />
       <LetterList :data="letterList" :current.sync="current" />
       <carDetail :data="detailcar" />
-      
   </div>
 </template>
 
@@ -18,7 +17,8 @@ export default Vue.extend({
   name: 'home',
   data() {
       return {
-        current: ''
+        current: '',
+        
       }
   },
   components: {
@@ -43,6 +43,10 @@ export default Vue.extend({
     this.getCardata()
     let MasterID:any = this.$router.currentRoute.query.MasterID
     this.getDetailCars(MasterID)
+    
+  },
+  mounted() {
+    
   }
 });
 </script> 
